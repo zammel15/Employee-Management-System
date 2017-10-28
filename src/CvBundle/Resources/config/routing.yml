@@ -1,0 +1,39 @@
+cv_homepage:
+    path:     /cv/{id}
+    defaults: { _controller: CvBundle:Default:index }
+
+cvs_homepage:
+    path:     /cvs
+    defaults: { _controller: CvBundle:Default:cvs }
+
+cv_editepage:
+    path:     /{nom}/{prenom}/{age}
+    defaults: { _controller: CvBundle:Default:edite }
+
+cv_templateepage:
+    path:     /template
+    defaults: { _controller: CvBundle:Default:template }
+
+cv_addpage:
+    path:     /addcv
+    defaults: { _controller: CvBundle:Default:addcv }
+
+cv_addperspage:
+    path:     /addPers/{nom}/{prenom}/{age}/{path}
+    defaults: { _controller: CvBundle:Default:addPers }
+
+cv_updateperspage:
+    path:     /updatePers/{id}/{nom}/{prenom}/{age}/{path}
+    defaults: { _controller: CvBundle:Default:updatePers }
+
+cv_deleteperspage:
+    path:     /deletePers/{id}
+    defaults: { _controller: CvBundle:Default:deletePers }
+
+cv_addpersform:
+    path:     /addPerss
+    defaults: { _controller: CvBundle:Default:addPerss }
+
+cv_updatepersform:
+    path:     /updatePerss/{id}
+    defaults: { _controller: CvBundle:Default:updatePerss }

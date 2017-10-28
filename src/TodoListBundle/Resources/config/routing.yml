@@ -1,0 +1,19 @@
+todo_list_homepage:
+    path:     /todolist
+    defaults: { _controller: TodoListBundle:Default:index }
+
+todo_list_add:
+    path:     /addtodo/{cle}/{valeur}
+    defaults: { _controller: TodoListBundle:Default:add }
+
+todo_list_delete:
+    path:     /deletetodo/{cle}
+    defaults: { _controller: TodoListBundle:Default:delete }
+
+todo_list_edite:
+    path:     /editetodo/{cle}/{valeur}
+    defaults: { _controller: TodoListBundle:Default:edite }
+
+todo_list_reset:
+    path:     /resettodo
+    defaults: { _controller: TodoListBundle:Default:reset }

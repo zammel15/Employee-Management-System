@@ -1,0 +1,57 @@
+{%extends "base.html.twig"%}
+
+
+{% block stylesheets %}
+    {{parent()}}
+
+
+
+    <link href="{{ asset('/edmin/css/theme.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('/edmin/images/icons/css/font-awesome.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600') }}" rel="stylesheet" type="text/css"/>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+{% block pagename %}
+    Ajouter cv
+{% endblock %}
+
+
+{% block breadcrumb %}
+    {{parent()}}
+    <li class="active"><i class="icon-file-alt"></i> Ajouter cv</li>
+{% endblock %}
+
+
+
+
+
+             {% block cvs %}
+
+                 {{ form_start(form) }}
+                 {{ form_widget(form) }}
+                 {{ form_end(form) }}
+
+             {% endblock %}
+
+
+
+
+{% block javascripts %}
+    {{parent()}}
+
+    <script src="{{ asset('/edmin/scripts/jquery-1.9.1.min.js') }}"></script>
+    <script src="{{ asset('/edmin/scripts/jquery-ui-1.10.1.custom.min.js') }}"></script>
+    <script src="{{ asset('/edmin/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/edmin/scripts/datatables/jquery.dataTables.js') }}"></script>
+
+{% endblock %}

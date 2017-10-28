@@ -1,0 +1,75 @@
+{%extends "base.html.twig"%}
+
+
+{% block stylesheets %}
+    {{parent()}}
+
+
+
+    <link href="{{ asset('/edmin/css/theme.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('/edmin/images/icons/css/font-awesome.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600') }}" rel="stylesheet" type="text/css"/>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+{% block pagename %}
+    Mon CV
+{% endblock %}
+
+
+{% block breadcrumb %}
+    {{parent()}}
+    <li class="active"><i class="icon-file-alt"></i> Mon CV </li>
+{% endblock %}
+
+
+
+
+
+             {% block cvs %}
+             <div class="span6">
+                 <div class="media user">
+                     <a class="media-avatar pull-left" href="#">
+                         <img src="/edmin/images/{{personne.getPath()}}">
+                     </a>
+                     <div class="media-body">
+                         <h3 class="media-title">
+                             {{personne.getNom()}} {{personne.getPrenom()}}
+                         </h3>
+                         <p>
+                             <small class="muted">{{personne.getAge()}}</small></p>
+                         <div class="media-option btn-group shaded-icon">
+                             <button class="btn btn-small">
+                                 <i class="icon-envelope"></i>
+                             </button>
+                             <button class="btn btn-small">
+                                 <i class="icon-share-alt"></i>
+                             </button>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+
+             {% endblock %}
+
+
+
+
+{% block javascripts %}
+    {{parent()}}
+
+    <script src="{{ asset('/edmin/scripts/jquery-1.9.1.min.js') }}"></script>
+    <script src="{{ asset('/edmin/scripts/jquery-ui-1.10.1.custom.min.js') }}"></script>
+    <script src="{{ asset('/edmin/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('/edmin/scripts/datatables/jquery.dataTables.js') }}"></script>
+
+{% endblock %}
